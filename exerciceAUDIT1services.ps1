@@ -3,9 +3,9 @@
 Description : Audit des services
 
 Auteur : FRTDev
-Date : 26/02/2025
+Date : 05/03/2025
 
-Version : 1
+Version : 2
 ==========================================================================
 #>
 
@@ -23,12 +23,12 @@ $services = @("DHCP", "DNS", "ADWS")
 
 # Vérifier chaque service
 foreach ($service in $services) {
-    $serviceStatus = Get-Service -Name $service
-    $status = if ($serviceStatus.Status -eq "Running") { "Activé" } else { "Désactivé" }
+    $serviceStatus = Get-Service -Name $service -ErrorAction SilentlyContinue
+    $status = if ($serviceStatus.Status -eq "Running") { "En cours d'exécution" } else { "Stoppé ou introuvable" }
     $content += "Service $service : $status`n"
 
     # Affichage à l'écran
-    if ($status -eq "Activé") {
+    if ($status -eq "En cours d'exécution") {
         Write-Host "Service $service : $status" -ForegroundColor Green
     } else {
         Write-Host "Service $service : $status" -ForegroundColor Red

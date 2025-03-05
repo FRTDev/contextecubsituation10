@@ -1,0 +1,21 @@
+Audit des enregistrements DNS - Lancé le 05/03/2025 09:27:36
+
+Zone : _msdcs.local.anvers.cub.sioplc.fr
+  Nom : gc, Adresse IP : 192.168.1.2
+  Nom : gc, Adresse IP : 192.168.1.1
+
+Zone : local.anvers.cub.sioplc.fr
+  Nom : @, Adresse IP : 192.168.1.1
+  Nom : @, Adresse IP : 192.168.1.2
+  Nom : DomainDnsZones, Adresse IP : 192.168.1.1
+  Nom : DomainDnsZones, Adresse IP : 192.168.1.2
+  Nom : ForestDnsZones, Adresse IP : 192.168.1.1
+  Nom : ForestDnsZones, Adresse IP : 192.168.1.2
+  Nom : Salle406-01, Adresse IP : 192.168.1.133
+  Nom : Salle406-04, Adresse IP : 192.168.1.131
+  Nom : serveurprimaire1, Adresse IP : 192.168.1.1
+  Nom : serveursecond, Adresse IP : 192.168.1.2
+  Nom : ServeurSecondaire, Adresse IP : 192.168.1.2
+  Nom : ServeurSecondaire1, Adresse IP : 192.168.1.2
+
+
