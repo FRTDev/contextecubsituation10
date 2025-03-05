@@ -1,6 +1,6 @@
-Audit des services - Lancé le 05/03/2025 08:43:46
+Audit des services - Lancé le 05/03/2025 08:56:28
 
-Service DHCP : Running
-Service DNS : Running
-Service ADWS : Running
+Service DHCP : Activé
+Service DNS : Activé
+Service ADWS : Activé
 

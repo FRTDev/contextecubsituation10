@@ -23,12 +23,15 @@ $services = @("DHCP", "DNS", "ADWS")
 
 # Vérifier chaque service
 foreach ($service in $services) {
-    $status = Get-Service -Name $service -ErrorAction SilentlyContinue
+    $serviceStatus = Get-Service -Name $service
+    $status = if ($serviceStatus.Status -eq "Running") { "Activé" } else { "Désactivé" }
+    $content += "Service $service : $status`n"
 
-    if ($status) {
-        $content += "Service $service : $($status.Status)`n"
+    # Affichage à l'écran
+    if ($status -eq "Activé") {
+        Write-Host "Service $service : $status" -ForegroundColor Green
     } else {
-        $content += "Service $service : Non trouvé`n"
+        Write-Host "Service $service : $status" -ForegroundColor Red
     }
 }
 
