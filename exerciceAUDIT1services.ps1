@@ -24,6 +24,7 @@ $services = @("DHCP", "DNS", "ADWS")
 # Vérifier chaque service
 foreach ($service in $services) {
     $status = Get-Service -Name $service -ErrorAction SilentlyContinue
+
     if ($status) {
         $content += "Service $service : $($status.Status)`n"
     } else {
